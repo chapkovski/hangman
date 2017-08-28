@@ -1,0 +1,61 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Hangman Sean
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="wrapper">
+        <div class='mastercontainer'>
+            {% include 'hangman2/hangman52.html' %}
+        </div>
+        <div id='overlay'>
+        </div>
+    </div>
+
+    <div id='winbutton'>
+        {% next_button %}
+    </div>
+{% include 'hangman2/modal_box.html' %}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        {% include 'hangman2/hangman_channel.js' %}
+    </script>
+{% endblock %}
+
+{% block styles %}
+    <link href='{% static "hangman2/css/hangcss52.css" %}' rel="stylesheet">
+    <style>
+        #winbutton {
+            display: {% if  player.lost or player.win   %}block{% else %}none{% endif %};
+        margin-top:10px;
+        }
+
+        .mastercontainer {
+            pointer-events: {% if  player.lost or player.win %}none{% else %}auto{% endif %};
+            z-index: -1;
+        }
+
+        #overlay {
+            display: {% if  player.lost or player.win %}block{% else %}none{% endif %};
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: gray;
+            top: 0px;
+{#            left: 50px;#}
+            padding: 1  0px;
+                  opacity: .8;
+            z-index: 1;
+        }
+    .wrapper{
+        position: relative;
+    }
+    </style>
+
+{% endblock %}

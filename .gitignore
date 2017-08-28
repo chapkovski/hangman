@@ -1,0 +1,12 @@
+venv
+*.pyc
+staticfiles
+./db.sqlite3
+.idea
+*~
+*.sqlite3
+_coverage_results/
+risk/
+test1/
+test2/
+

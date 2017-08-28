@@ -1,0 +1,345 @@
+/*define colour of mastercontainer*/
+.mastercontainer{
+    background-color: #ffffc2;
+}
+
+.emptyspace{
+    height: 20px;
+}
+
+
+
+
+
+.lettercontainer{
+    border: 1px dashed black;
+    width: 100%;
+    height: 490px;
+}
+
+/*css for box titles*/
+.title{
+    margin-top: 0px;
+    text-align: center;
+}
+
+.possiblebox{
+    margin-top: 0%;
+    width: inherit;
+    height: 30%;
+    background-color: hsl(210,100%,90%);
+    border: 5px solid blue;
+
+}
+
+        .pbutton {
+            padding: 0px;
+            background-color: #e7e7e7;
+            color: black;
+            border: solid 2px blue;
+            font-size: 20px;
+            font-weight: 500;
+            
+            width: 5.5%;
+            height: 35px;
+            margin-left: 1.35%;    
+        }
+
+
+
+.chosenbox{
+    margin-top: 5%;
+    width: inherit;
+    height: 30%;
+    background-color: hsl(0,100%,90%);
+    border: 5px solid red;
+}
+
+        /* Define Appearance of Chosen Letters -not position*/
+        .chosen {
+            padding: 0px;
+            background-color: #e7e7e7;
+            color: black;
+            border: solid 2px red;
+            font-size: 20px;
+            font-weight: 500;
+            
+            width: 5.5%;
+            height: 35px;
+            margin-left: 1.35%;
+            
+            /*visibility: hidden;*/
+            
+/*
+            display: flex;
+            align-items: center;
+            justify-content: center;
+*/
+            display: inline-block;
+            text-align: center;
+        }
+.rowtop{
+    margin-top: 0%;
+}
+.rowbottomp{
+    margin-top: 4%;
+}
+
+.rowbottomc{
+    margin-top: 2%;
+}
+
+
+
+
+/*Box position of correct word----------------------------------------------------------------*/
+/* position of title */
+.wordbox{
+    margin-top: 5%;
+    width: inherit;
+    height: 30%;
+    background-color: hsl(120,100%,90%);
+    border: 5px solid green;
+    text-align: center;
+}
+
+
+
+/*layout of correct letters*/
+        .word {
+            position: relative;
+            margin-top: 3%;
+            padding: 0px;
+            background-color: white;
+            color: black;
+            border: solid 2px green;
+            font-size: 20px;
+            font-weight: 500;
+            
+            width: 5.5%;
+            height: 35px;
+            margin-left: 1%;
+            
+            display: inline-block;
+            text-align: center;
+        }
+
+/*Position of images--------------------------------------------------------------------------*/
+.imagebox{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 490px;
+    background: white;
+    border: 2px solid black;
+}
+
+/*counter*/
+    #hangcounter{
+        position: absolute;
+        width:20px;
+        height:30px;
+
+        margin-top: 458px;
+        margin-left: 55%;
+        
+        background: transparent;
+    }
+
+.image{
+    visibility: hidden;
+}
+
+    .hanglayout1{
+        position: absolute;
+        width: 10px;
+        height: 450px;
+        margin-top: 30px;
+        margin-left: 30px;
+        background: brown;
+    }
+
+    .hanglayout2{
+        position: absolute;
+        width: 150px;
+        height: 10px;
+        margin-top: 20px;
+        margin-left: 30px;
+        background: brown;
+    }
+
+    .hanglayout3{
+        position: absolute;
+        width: 10px;
+        height: 100px;
+        margin-top: 20px;
+        margin-left: 170px;
+        background: brown;
+    }
+
+/*head*/
+    .hanglayout4 {
+        position: absolute;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin-top: 120px;
+        margin-left: 135px;
+        background: beige;
+        border: black 1px solid;
+    }
+
+/*body*/
+    .hanglayout5 {
+        position: absolute;
+        border-radius: 40%;
+        width: 100px;
+        height: 150px;
+        margin-top: 200px;
+        margin-left: 125px;
+        background: beige;
+        border: black 1px solid;
+    }
+
+/*left arm*/
+    .hanglayout6 {
+        position: absolute;
+        border-radius: 50%;
+        width: 20px;
+        height: 90px;
+        margin-top: 220px;
+        margin-left: 130px;
+        background: beige;
+        border: black 1px solid;
+    }
+
+/*right arm*/
+    .hanglayout7 {
+        position: absolute;
+        border-radius: 50%;
+        width: 20px;
+        height: 90px;
+        margin-top: 220px;
+        margin-left: 200px;
+        background: beige;
+        border: black 1px solid;
+    }
+
+/*left leg*/
+    .hanglayout8 {
+        position: absolute;
+        border-radius: 50%;
+        width: 25px;
+        height: 100px;
+        margin-top: 343px;
+        margin-left: 130px;
+        background: beige;
+        border: black 1px solid;
+    }
+
+/*right leg*/
+    .hanglayout9 {
+        position: absolute;
+        border-radius: 50%;
+        width: 25px;
+        height: 100px;
+        margin-top: 343px;
+        margin-left: 195px;
+        background: beige;
+        border: black 1px solid;
+    }
+
+/*mouth*/
+    .hanglayout11 {
+        position: absolute;
+        margin-top: 180px;
+        margin-left: 160px;
+
+        width:30px;
+        height:20px;
+        border:solid 2.2px black;
+        border-color:black transparent transparent transparent;
+        border-radius: 80%/80px 80px 40% 0;
+    }
+
+/*right eye 102 and 103*/
+    .hanglayout12 {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 152px;
+
+
+        height: 1px;
+        width: 20px;
+        position: absolute;
+        border: 1px solid black;
+        background-color: black;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -ms-transform-origin: 20% 40%; /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        -webkit-transform-origin: 20% 40%; /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+        transform-origin: 20% 40%;
+    }
+
+    .hanglayout13 {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 161px;
+
+
+        height: 1px;
+        width: 20px;
+        position: absolute;
+        border: 1px solid black;
+        background-color: black;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -ms-transform-origin: 20% 40%; /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        -webkit-transform-origin: 20% 40%; /* Chrome, Safari, Opera */
+        transform: rotate(135deg);
+        transform-origin: 20% 40%;
+    }
+
+/*left eye 104 and 105*/
+    .hanglayout14 {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 182px;
+
+
+        height: 1px;
+        width: 20px;
+        position: absolute;
+        border: 1px solid black;
+        background-color: black;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -ms-transform-origin: 20% 40%; /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        -webkit-transform-origin: 20% 40%; /* Chrome, Safari, Opera */
+        transform: rotate(45deg);
+        transform-origin: 20% 40%;
+    }
+
+    .hanglayout15 {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 191px;
+
+
+        height: 1px;
+        width: 20px;
+        position: absolute;
+        border: 1px solid black;
+        background-color: black;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -ms-transform-origin: 20% 40%; /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+        -webkit-transform-origin: 20% 40%; /* Chrome, Safari, Opera */
+        transform: rotate(135deg);
+        transform-origin: 20% 40%;
+    }
+
+
+
+

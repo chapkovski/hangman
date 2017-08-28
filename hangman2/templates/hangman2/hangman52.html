@@ -1,0 +1,82 @@
+<h1 class='text-center'>Hangman</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--left column-->
+        <div class="col-sm-7">
+            <!--    box with lettercontainer-->
+            <div class='lettercontainer'>
+                <!--        box with all possible letters-->
+                <div class='possiblebox'>
+                    <h3 class='title'>Possible Letters</h3>
+                    {% for l in player.to_choose %}
+                        <button type='button' id=button{{ l }} class='pbutton' value={{ l }}>{{ l|upper }}</button>
+                    {% endfor %}
+                </div>
+                <!--        box with chosen letters-->
+                <div class='chosenbox'>
+                    <h3 class='title'>Chosen Letters</h3>
+                    {% for l in player.chosen %}
+                        <p id='chosen{{ l }}' class='chosen'>{{ l|upper }}</p>
+                    {% endfor %}
+                </div>
+                <!--        box of correct word-->
+                <div class='wordbox'>
+                    <h3 class='title'>The Word</h3>
+                    {% for l in player.correct %}
+                        <p id='correct{{ forloop.counter0 }}' class='word word_to_guess'>{{ l }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!--    right column-->
+        <div class="col-sm-5">
+
+            <!--    box of hangman images-->
+            <div class='imagebox'>
+                {% for a in total_image %}
+                    <div id=hang{{ a }} class='image hanglayout{{ a }}'></div>
+                {% endfor %}
+
+                <h3 id=hangcounter class='hangcounter'><span id="attempts">{{incorrect_len}}</span>/<span id="total">{{ Constants.num_attempts }}</span></h3>
+            </div>
+        </div>
+        <!--     close the row containing all content except for title-->
+    </div>
+    <!--    close the container-fluid box-->
+</div>
+
+
+<!--emptyspace-->
+<div class='container-fluid'>
+    <div class='emptyspace'>
+    </div>
+
+</div>
+
+<script>
+
+    var to_choose = '{{ player.to_choose }}';
+    var correct = '{{ player.correct }}';
+    var chosen = '{{ player.chosen }}';
+    var len_word ={{ player.len_word }};
+    var how_many_show = '{{ player.wrong }}'.length
+    var lost= '{{ player.lost }}'
+    if (lost == "True") {how_many_show={{Constants.max_num_attempts}};}
+    for (var i = 1, len = how_many_show; i <= len; i++) {
+        console.log(i);
+        $('div#hang'+i).css("visibility", "visible");
+    }
+
+    $("button.pbutton").click(function () {
+        console.log('btnclicketd');
+        console.log($(this).val());
+        wpsocket.send($(this).val().toLowerCase());
+        $(this).remove();
+
+        $('.chosenbox').append($(this));
+    });
+</script>
+<style>
+
+</style>
